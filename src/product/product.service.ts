@@ -12,8 +12,6 @@ export class ProductService {
   ) {}
 
   async createProduct(createProductDto: CreateProductDto) {
-    console.log(createProductDto, 'createProductDto');
-
     const product = new this.productModel(createProductDto);
     return product.save();
   }
